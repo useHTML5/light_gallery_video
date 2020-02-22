@@ -5,6 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from .models import LightGalleryVideo
 
+
 class LightGalleryVideoPlugin(CMSPluginBase):
     model = LightGalleryVideo
     name = _("Light Gallery Video")
@@ -17,14 +18,22 @@ class LightGalleryVideoPlugin(CMSPluginBase):
                 'folder',
                 'muted',
                 ('pageThumbWidth',
-                'pageThumbHeight',),
+                 'pageThumbHeight',),
+            ]
+        }),
+        ('Bootstrap', {
+            'classes': ['collapse', ],
+            'fields': [
+                'bootstrap4_column_class',
+                'bootstrap4_row_class',
+                'bootstrap4_image_class',
             ]
         }),
         (_('Core'), {
             'classes': ['collapse', ],
             'fields': [
                 'mode',
-		'cssEasing',
+                'cssEasing',
                 'easing',
                 'speed',
                 'height',
@@ -183,7 +192,9 @@ class LightGalleryVideoPlugin(CMSPluginBase):
             'googlePlusDropdownText': instance.googlePlusDropdownText,
             'pinterest': instance.pinterest,
             'pinterestDropdownText': instance.pinterestDropdownText,
+            'instance': instance,
         })
         return context
+
 
 plugin_pool.register_plugin(LightGalleryVideoPlugin)

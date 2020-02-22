@@ -52,7 +52,7 @@
 {% addtoblock "js" %}
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#light-gallery-{{ id }}").lightGallery({
+            $("#light-gallery-video-{{ id }}").lightGallery({
                 mode: "{{ mode }}",
                 cssEasing: "{{ cssEasing }}",
                 easing: "{{ easing }}",
@@ -134,10 +134,10 @@
     </div>
 {% endfor %}
 
-<div id="light-gallery-{{ id }}" class="video-gallery">
+<div id="light-gallery-video-{{ id }}" class="video-gallery {{ instance.bootstrap4_row_class }}">
     {% for image in images %}
-        <div data-html="#light-gallery-{{ id }}-video-{{ image.id }}">
-            <a href="#" class="">
+        <div data-html="#light-gallery-{{ id }}-video-{{ image.id }}" class="{{ instance.bootstrap4_column_class }}">
+            <a href="#" class="d-block position-relative {{ instance.bootstrap4_image_class }}">
                 {% if image.poster %}
                     <img class="" src="{% thumbnail image.poster pageThumbWidthHeight upscale %}">
                 {% endif %}

@@ -1,4 +1,3 @@
-include LICENSE
 include README.rst
 recursive-include light_gallery_video *
 recursive-include light_gallery_video/templates/light_gallery_video.html
