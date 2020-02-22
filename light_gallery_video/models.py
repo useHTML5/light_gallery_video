@@ -59,7 +59,7 @@ class LightGalleryVideo(CMSPlugin):
     bootstrap4_row_class = models.CharField('Bootstrap4 row class', default='row', max_length=255, blank=True)
     bootstrap4_column_class = models.CharField('Bootstrap4 column class', default='col-lg-3', max_length=255,
                                                blank=True)
-    bootstrap4_image_class = models.CharField('Bootstrap4 image class', default='py-1', max_length=255,
+    bootstrap4_image_class = models.CharField('Bootstrap4 image class', default='my-1', max_length=255,
                                                blank=True)
     muted = models.BooleanField(_('Muted'), default=False)
     pageThumbWidth = models.CharField(_("Page Thumb Width"), max_length=255, default="150",

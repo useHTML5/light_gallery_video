@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='lightgalleryvideo',
             name='bootstrap4_image_class',
-            field=models.CharField(blank=True, default='py-1', max_length=255, verbose_name='Bootstrap4 image class'),
+            field=models.CharField(blank=True, default='my-1', max_length=255, verbose_name='Bootstrap4 image class'),
         ),
         migrations.AlterField(
             model_name='lightgalleryvideo',
